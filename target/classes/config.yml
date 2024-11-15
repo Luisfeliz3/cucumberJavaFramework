@@ -1,0 +1,84 @@
+userId:
+   - selector: ".nav-link.services"
+   - type: css
+   - timeout: 2000
+
+userPassword:
+   - selector: "//input[@placeholder='Password (required)'']"
+   - type: xpath
+   - timeout: 2000
+
+navLoginButton:
+   - selector: "a[type=\"submit\"]"
+   - type: css
+   - timeout: 2000
+ 
+userLoginButton:
+    - selector: ".login-now.btn.btn-primary"
+    - type: css
+    - timeout: 2000
+
+signButton:
+    - selector: ".signup-signup-now.btn.btn-primary"
+    - type: css
+    - timeout: 2000
+
+dashboard:
+    - selector: "img[alt='app_logo']"
+    - type: css
+    - timeout: 2000
+
+statement_balance:
+     - selector: "h5[class='card-title']"
+     - type: css
+     - timeout: 2000
+
+card_container:
+- selector: "//div[@class='card-group dashboard']"
+- type: xpath
+- timeout: 2000
+
+transaction_container:
+- selector: "//div[@class='recent-activity-table']"
+- type: xpath
+- timeout: 2000
+
+make_a_Payment_button:
+- selector: "//button[normalize-space()='Make a Payment']"
+- type: xpath
+- timeout: 2000
+
+pay_your_bill_container:
+- selector: "//div[@class='payment-method']"
+- type: xpath
+- timeout: 2000
+
+min_payment_due_radio_button:
+- selector: "//input[@value='minimum_payment']"
+- type: xpath
+- timeout: 2000
+
+dollar_input_payment_box:
+- selector: "//input[@id='dollarInput']"
+- type: xpath
+- timeout: 2000
+
+pay_now_button:
+- selector: "//button[normalize-space()='Pay Now']"
+- type: xpath
+- timeout: 2000
+
+pay_total_balance_radio_button:
+- selector: "//input[@value='total_balance']"
+- type: xpath
+- timeout: 2000
+
+pay_statement_balance_radio_button:
+- selector: "//input[@value='statement_balance']"
+- type: xpath
+- timeout: 2000
+
+pay_other_amount_radio_button:
+- selector: "//input[@value='other_amount']"
+- type: xpath
+- timeout: 2000
