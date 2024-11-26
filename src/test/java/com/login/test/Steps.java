@@ -1,22 +1,21 @@
-package stepDefinition;
+package com.login.test;
 
 import org.openqa.selenium.WebDriver;
 
-import com.wrappers.veryfiers;
+import com.login.verifiers.Veryfier;
 
-import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
  
 
-public class stepDefinitions  {
+public class Steps  {
 	private WebDriver driver = Hooks.getDriver();
           
  
  
-	veryfiers ele = new veryfiers();
+	Veryfier ele = new Veryfier();
 	
  	@Given("I have logged in")
 	public void i_have_logged_in() {
@@ -98,9 +97,11 @@ public class stepDefinitions  {
 	@Then("I should see alert Pay Other Amount {string}")
 	public void i_should_see_alert_pay_other_amount(String string) {
 		ele.switchToAlertGetText(driver, string);
+		
+		System.out.println();
 	}
 	
-		
+	
 
 	@Then("I enter Pay Statement Balance {string}")
 	public void I_enter_pay_statement_balance(String payment) {
@@ -132,5 +133,13 @@ public class stepDefinitions  {
 		ele.clear(driver, "dollar_input_payment_box");
 		ele.sendKeys( driver, "dollar_input_payment_box",payment);
 	}
+	
+	@Then("Retrieve all Links from page")
+	public void Retrieve_all_Links_from_page() {
+			ele.getAllLinks(driver);
+	}
+	
+ 
+
 	
 }

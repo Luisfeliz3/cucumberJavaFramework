@@ -1,4 +1,4 @@
-package hooks;
+package com.login.test;
 
 import java.io.File;
 import java.io.FileReader;
@@ -26,7 +26,8 @@ public class Hooks {
     public void setUp() {
  
     	Properties prop = new Properties();
-		try {
+		try { 
+//			File propFile = new File(System.getProperty("webdriver.chrome.driver") + "/CucumberJavaProject/chromedriver");
 			File propFile = new File(System.getProperty("user.dir") + "/src/main/java/utils/data.properties");
 			FileReader fr = new FileReader(propFile);
 			prop.load(fr);

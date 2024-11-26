@@ -28,6 +28,8 @@ Feature: Payment Center Test
     Then I enter <payment> <amount>
     Then I click on pay now button
     Then I should see alert <payment> <message>
+    
+    
  		
  
     Examples:
@@ -37,4 +39,9 @@ Feature: Payment Center Test
      | Pay Total Balance         | "8834.55" | "You can only Pay the Full Amount, If you want to make a custom payment please choose the 'Pay Other Amount' option" |
      #| Pay Other Amount          | "500.00"  | "Please pay up to the Total Amount only!" |
  
+ 
+ 
+ Scenario: Get All Links From Page
+    Given I have logged in 
+    Then Retrieve all Links from page
  

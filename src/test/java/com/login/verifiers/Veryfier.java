@@ -1,7 +1,10 @@
-package com.wrappers;
+package com.login.verifiers;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,9 +14,9 @@ import io.cucumber.java.en.Given;
  
 
  
-public class veryfiers{
+public class Veryfier{
 	
- 
+	 
 		
 	 
 		convertYaml selects = new convertYaml();
@@ -94,6 +97,17 @@ public class veryfiers{
 		public void today_is_sunday() {
 		    // Write code here that turns the phrase above into concrete actions
 		}
+		
+		
+		  public void getAllLinks(WebDriver driver){
+			  //Get list of web-elements with tagName  - a
+			  List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+			  
+			  //Traversing through the list and printing its text along with link address
+			  for(WebElement link:allLinks){
+			  System.out.println(link.getText() + " - " + link.getAttribute("href"));
+			  }
+		  }
 		
 		
 		   // Method to highlight an element

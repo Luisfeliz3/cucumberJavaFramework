@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>rk</groupId>
-  <artifactId>FrameWork</artifactId>
+  <artifactId>CucumberFrameWork</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>FrameWork</name>
@@ -14,7 +14,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
-      <cucumber.options>--tags @SmokeTest</cucumber.options>
+  
   </properties>
 
   <dependencyManagement>
