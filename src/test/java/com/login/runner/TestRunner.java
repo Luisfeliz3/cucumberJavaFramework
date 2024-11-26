@@ -11,7 +11,7 @@ import io.cucumber.junit.Cucumber;
 		features = {"Features"} // Folder name 
 		, glue = {"com.login.test", "hooks"}
 //		,tags = "@Integration or @Wip and not @SmokeTest and not @Ignore"
-		  ,plugin = {"pretty", "html:target/cucumber-reports.html"}
+		  ,plugin = {"pretty", "html:target/cucumber-reports.html,","json:target/TestReports.json"}
 		  ,monochrome = true
 		)
 
