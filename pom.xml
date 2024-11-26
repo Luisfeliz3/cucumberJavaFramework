@@ -76,6 +76,13 @@
         <artifactId>slf4j-simple</artifactId>
         <version>1.7.36</version>
     </dependency>
+    
+        <!-- Cucumber Report Plugin -->
+    <dependency>
+        <groupId>net.masterthought</groupId>
+        <artifactId>cucumber-reporting</artifactId>
+        <version>5.7.0</version>
+    </dependency>
 
   </dependencies>
 
@@ -120,6 +127,26 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.6.1</version>
+        </plugin>
+         <plugin>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>5.7.0</version>
+            <executions>
+                <execution>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <projectName>My Cucumber Project</projectName>
+                        <outputDirectory>CucumberJavaProject</outputDirectory>
+                        <jsonFiles>
+                            <param>target/TestReport.json</param>
+                        </jsonFiles>
+                    </configuration>
+                </execution>
+            </executions>
         </plugin>
       </plugins>
     </pluginManagement>
