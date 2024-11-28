@@ -20,7 +20,7 @@
 Feature: Payment Center Test
   This will run basic Payments tests
 
- @SmokeTest
+@runme
   Scenario: Login in feature 
     Given I have logged in 
     And I click nav bar login button

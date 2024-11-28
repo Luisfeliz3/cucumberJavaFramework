@@ -24,6 +24,8 @@ public class Hooks {
 
     @Before
     public void setUp() {
+    	
+    	System.getProperty("webdriver.chrome.driver", "/CucumberJavaProject/chromedriver");
  
     	Properties prop = new Properties();
 		try { 
@@ -31,6 +33,7 @@ public class Hooks {
 			File propFile = new File(System.getProperty("user.dir") + "/src/main/java/utils/data.properties");
 			FileReader fr = new FileReader(propFile);
 			prop.load(fr);
+			
 		
 		} catch (Exception e) {
 			e.printStackTrace();

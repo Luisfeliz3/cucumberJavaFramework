@@ -1,5 +1,4 @@
 com/login/test/Hooks.class
-com/login/runner/TestRunner.class
 com/login/verifiers/convertYaml.class
 com/login/verifiers/Veryfier.class
 com/login/test/Steps.class
