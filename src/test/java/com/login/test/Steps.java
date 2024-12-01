@@ -143,7 +143,13 @@ public class Steps  {
 			ele.getAllLinks(driver);
 	}
 	
- 
+	@Then("I will select the first value from dropdown")
+	public void i_will_select_the_first_value_from_dropdown() {
+
+		ele.selectDropDownFirstIndex(driver, "pay_date_today");
+		
+	}
+
 
 	
 }

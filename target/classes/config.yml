@@ -82,3 +82,8 @@ pay_other_amount_radio_button:
 - selector: "//input[@value='other_amount']"
 - type: xpath
 - timeout: 2000
+
+pay_date_today:
+- selector: "//select[@name='dates']"
+- type: xpath
+- timeout: 2000

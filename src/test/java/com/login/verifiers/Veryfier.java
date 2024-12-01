@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import io.cucumber.java.en.Given;
 
@@ -108,6 +109,32 @@ public class Veryfier{
 			  System.out.println(link.getText() + " - " + link.getAttribute("href"));
 			  }
 		  }
+		  
+			public void selectDropDownFirstIndex(WebDriver driver,String locatorName)  {
+				WebElement element = selects.locator(driver, locatorName );
+				Select dropdown = new Select(element);
+					dropdown.selectByIndex(0);
+			}
+			
+			public void selectDropDownByValue(WebDriver driver,String locatorName, String dropDownValue) throws InterruptedException  {
+				WebElement element = selects.locator(driver, locatorName );
+				Select dropdown = new Select(element);
+			 
+					dropdown.selectByValue(dropDownValue);
+				 
+				 
+				 
+			}
+		
+		
+			public boolean isDropDownMultiple(WebDriver driver,String locatorName, String dropDownValue)  {
+				WebElement element = selects.locator(driver, locatorName );
+				Select dropdown = new Select(element);
+				dropdown.isMultiple();
+				return 	dropdown.isMultiple();
+			}
+			
+			
 		
 		
 		   // Method to highlight an element

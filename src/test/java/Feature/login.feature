@@ -20,9 +20,14 @@
 Feature: Payment Center Test
   This will run basic Payments tests
 
-  Scenario: Get All Links
+  #Scenario: Get All Links
+    #Given I have logged in 
+    #Then Retrieve all Links from page
+    
+  Scenario: Select From DropDown
     Given I have logged in 
-    Then Retrieve all Links from page
+    Then I click on the make a payment button
+    Then I will select the first value from dropdown
  
  
  
@@ -32,13 +37,19 @@ Feature: Payment Center Test
     #When I click on the app logo
 #		Then I click on the statement balance
 
-  #@tag2
-  #Scenario Outline: Title of your scenario outline
-    #Given I want to write a step with <name>
-    #When I check for the <value> in step
-    #Then I verify the <statuss> in step
-#
-    #Examples: 
-      #| name  | value | status  |
-      #| name1 |     5 | success |
-      #| name2 |     7 | Fail    |
+ #Scenario: Make A Payment Scenarios
+    #Given I have logged in 
+    #Then I click on the make a payment button
+    #Then I should see the pay your bill container
+    #Then I click on <payment> radio button
+    #Then I enter <payment> <amount>
+    #Then I click on pay now button
+    #Then I should see alert <payment> <message>
+ #		
+ #
+    #Examples:
+     #| payment                   | amount    | message                       |
+     #| Minimun Payment Due       | "40.00"   | "Thank You For Your Payment!" |
+     #| Pay Statement Balance     | "1000.85" | "Thank You For Your Payment!" |
+     #| Pay Total Balance         | "8834.55" | "You can only Pay the Full Amount, If you want to make a custom payment please choose the 'Pay Other Amount' option" |
+     #| Pay Other Amount          | "500.00"  | "Please pay up to the Total Amount only!" |
