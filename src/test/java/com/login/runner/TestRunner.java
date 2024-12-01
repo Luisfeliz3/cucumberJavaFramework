@@ -10,13 +10,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith (Cucumber.class)
 @CucumberOptions(
-		features = {"Features"} // Folder name 
+		features = {"src/test/resources/Features"} // Folder name 
 		, glue = {"com.login.test"}
 //		,tags = "@runme"
-		  ,plugin = {"pretty",
+		,plugin = {"pretty",
 				  "html:target/cucumber-reports.html",
 				  "json:target/TestReports.json"},
-		  dryRun = false
+		   dryRun = false
 		  ,monochrome = true
 		)
 

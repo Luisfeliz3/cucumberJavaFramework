@@ -3,16 +3,14 @@ package com.login.test;
 import java.io.File;
 import java.io.FileReader;
 import java.time.Duration;
-
-import io.cucumber.java.After;
- 
-import io.cucumber.java.Before;
- 
-
 import java.util.Properties;
+import io.cucumber.java.After;
+
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+ 
  
  
  
@@ -26,7 +24,6 @@ public class Hooks {
     public void setUp() {
     	
     	System.getProperty("webdriver.chrome.driver", "/CucumberJavaProject/chromedriver");
- 
     	Properties prop = new Properties();
 		try { 
 //			File propFile = new File(System.getProperty("webdriver.chrome.driver") + "/CucumberJavaProject/chromedriver");
